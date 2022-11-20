@@ -88,7 +88,7 @@ function ShowPage() {
                                     <b>This area is password protected</b>
                                     <p>Please enter the password below</p>
                                     <form className='form_1'>
-                                        <input type ='text' className = 'sub_text' />
+                                        <input type ='password' className = 'sub_text' />
                                         <div>Login</div>
                                     </form>
                                     <div className='top_space'></div>
