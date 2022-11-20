@@ -73,7 +73,7 @@ function Dashboard() {
           <div className='top_right_icon'>
             <FaBars style={{ color: 'white', fontSize: '30px' }} />
           </div>
-          <div className='title_logo font-face-tg'><b className='title_logo_hand'>HAND</b><b>MODELS.CO.UK</b></div>
+          <div className='title_logo font-face-tg'><a href='https://HANDMODELS.CO.UK'><b className='title_logo_hand'>HAND</b><b>MODELS.CO.UK</b></a></div>
           <div className='main_slogan font-face-ms'>
             <div className='hand_div'>HAND</div>
             <div className='model_div'>MODEL</div>
