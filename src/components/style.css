@@ -38,6 +38,7 @@
     color: #186994;
     border-radius: 5px;
     padding: 5px 10px;
+    cursor: pointer;
 }
 
 .sub_text {
