@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-.container {
+.first_page {
   position: absolute;
   left: 0%;
   top: 0%;
@@ -20,7 +20,6 @@ code {
   bottom: 0%;
   width: 100%;
   height: 100vh;
-  background-image: url(/public/back.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

@@ -1,0 +1,107 @@
+
+.container {
+    color: white;
+}
+
+.top_space {
+    height: 20px;
+}
+
+.show_dashboard {
+    background-color: #888;
+}
+
+.logo_imgs {
+    text-align: left;
+}
+
+.logo_imgs img {
+    vertical-align: bottom;
+}
+.inbox {
+    width: 100%;
+    background-color: #186994;
+    border-radius: 10px;
+    font-size: 22px;
+    padding: 7px;
+    font-family: 'Montserrat';
+}
+.form_1 {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.form_1 div {
+    font-size: 15px;
+    background-color: white;
+    color: #186994;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.sub_text {
+    height: 30px;
+    width: 60%;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.inbox p {
+    font-size: 12px;
+}
+
+.mail_img {
+
+}
+
+.frame div {
+    align-items: center;
+}
+
+.button_group {
+    color: black;
+    font-size: 15px;
+    
+}
+
+.button_group div{
+    padding:10px 3px  !important;
+}
+
+.each_btn {
+    background-color: #eee;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.each_btn:hover {
+    background-color: #232;
+    color: white;
+}
+.main_container {
+    height: 70vh;
+    /* background-color: #186994; */
+    position: relative 
+}
+
+.footer_btns {
+    margin-top: 20px;
+}
+.footer_btns button {
+    margin: 0 10px ;
+    border-radius: 20px;
+    padding: 3px 20px;
+}
+
+ .password_checker  {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    padding: 20px;
+}
