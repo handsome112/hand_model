@@ -18,11 +18,22 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 84%;
+  /* margin-top: 5vh; */
+}
+
+
+
+.mt-5vh {
   margin-top: 5vh;
 }
 
 .title_logo_hand {
   color: white;
+}
+
+a {
+  text-decoration: none !important;
+  color: #FF7171 !important;
 }
 
 .main_slogan {
@@ -36,16 +47,21 @@
 }
 
 .hand_div {
-  margin-left: -20rem;
+  margin-left: -15%;
 }
 
 .model_div {
-  margin-left: 10rem;
+  margin-left: 5%;
 }
 
 .agency_div {
-  margin-left: 30rem;
+  margin-left: 25%;
 }
+
+.main_slogan div {
+  font-size: calc(40px + 2.5vw);
+}
+
 
 .apply_join {
   position:absolute;
@@ -55,15 +71,29 @@
 
 .font-face-tg {
   font-family: "Terminator_Genisys";
- }
+}
 
 .font-face-ms {
   font-family: "Montserrat-Regular";
 }
 
 .top_right_icon {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
+  display: flex;
+  justify-content: end;
+  min-width: 30px;
+  margin-right: 15px;
+  /* position: absolute; */
+  /* top: 2rem;
+  right: 2rem; */
 }
- 
+
+
+@media only screen and (max-width: 520px) {
+  .title_logo {
+    font-size: 28px;
+  }
+
+  .first_page {
+    height: 140vh;
+  }
+}

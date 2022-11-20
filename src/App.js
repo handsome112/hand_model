@@ -4,6 +4,11 @@ import './App.css';
 import styled from 'styled-components';
 import { FaBars } from "react-icons/fa";
 import LoginModal from "react-login-modal";
+
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 import ShowPage from './components/showpage';
 
 
@@ -29,7 +34,7 @@ function App() {
           <Dashboard />
         ) : (
           // <Dashboard/>
-          <Passpanel />
+          <Passpanel />    //here does not pass at all !!!  ignore it !!
         )}
 
       </div>
@@ -40,10 +45,12 @@ function App() {
 function Passpanel() {
   return (
     <>
-      <div className='title_logo font-face-tg'><b className='title_logo_hand'>HAND</b><b>MODELS.CO.UK</b></div>
-      <div>
-        <LoginModal />
-      </div>
+      <Container>
+        <div className='title_logo font-face-tg'><b className='title_logo_hand'>HAND</b><b>MODELS.CO.UK</b></div>
+        <div>
+          <LoginModal />
+        </div>
+      </Container>
     </>
   )
 }
@@ -54,34 +61,39 @@ function Dashboard() {
   const clickMe = async () => {
     setJoin(true);
   }
-
-  // if(join)
-  // {
-  //   return 
-  //   (
-  //     // <ShowPage />
-  //     <h2>123123123</h2>
-  //   )
-  // }
-  // else
   return (
     <>
       {join == true ? (
         <ShowPage />
       ) : (
         <>
-          <div className='top_right_icon'>
-            <FaBars style={{ color: 'white', fontSize: '30px' }} />
-          </div>
-          <div className='title_logo font-face-tg'><a href='https://HANDMODELS.CO.UK'><b className='title_logo_hand'>HAND</b><b>MODELS.CO.UK</b></a></div>
-          <div className='main_slogan font-face-ms'>
-            <div className='hand_div'>HAND</div>
-            <div className='model_div'>MODEL</div>
-            <div className='agency_div'>AGENCY</div>
-          </div>
-          <div className='apply_join'>
-            <Button onClick={clickMe}>Apply to Join</Button>
-          </div>
+          <Container>
+            <div className='mt-5vh'>
+            <Row>
+              <Col xs={10} md={9}>
+                <div className='title_logo font-face-tg'><a href='https://HANDMODELS.CO.UK'><b className='title_logo_hand'>HAND</b><b>MODELS.CO.UK</b></a></div>
+              </Col>
+              <Col xs={2} md={3}>
+                <div className='top_right_icon'>
+                  <FaBars style={{ color: 'white', fontSize: '30px' }} />
+                </div>
+              </Col>
+            </Row>
+            </div>
+            <Row>
+
+
+            </Row>
+
+            <div className='main_slogan font-face-ms'>
+              <div className='hand_div'>HAND</div>
+              <div className='model_div'>MODEL</div>
+              <div className='agency_div'>AGENCY</div>
+            </div>
+            <div className='apply_join'>
+              <Button onClick={clickMe}>Apply to Join</Button>
+            </div>
+          </Container>
         </>
       )}
     </>

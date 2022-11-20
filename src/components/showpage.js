@@ -45,13 +45,13 @@ function ShowPage() {
                     <div className='top_space'></div>
                 </Row>
                 <Row>
-                    <Col xs={8} >
+                    <Col xs={12} md={8} >
                         <div className='logo_imgs'>
                             <img src='logo.png' />
                             <img src='co.png' />
                         </div>
                     </Col>
-                    <Col xs={4}>
+                    <Col xs={12} md={4}>
                         <div className='frame'>
                             <Row>
                                 <Col xs={8} >
@@ -88,7 +88,7 @@ function ShowPage() {
                                     <b>This area is password protected</b>
                                     <p>Please enter the password below</p>
                                     <form className='form_1'>
-                                        <input type ='password' className = 'sub_text' />
+                                        <input type='password' className='sub_text' />
                                         <div>Login</div>
                                     </form>
                                     <div className='top_space'></div>
@@ -98,9 +98,10 @@ function ShowPage() {
                     </div>
                 </div>
                 <div className='footer_btns'>
-                    {btnLists.map((btnlist) => (
-                        <button>{btnlist.text}</button>
-                    ))}
+                        {btnLists.map((btnlist) => (
+                                <button>{btnlist.text}</button>
+                        ))}
+
                 </div>
             </Container>
         </>

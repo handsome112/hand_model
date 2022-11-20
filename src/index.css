@@ -20,11 +20,17 @@ code {
   bottom: 0%;
   width: 100%;
   height: 100vh;
+  /* background-image: url(/public/back.jpg); */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: black;
   z-index: -1;
+}
+
+.first_page div {
+  /* display: flex;
+  flex-direction: column; */
 }
   
   /* background-repeat: no-repeat;  */

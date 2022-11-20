@@ -17,6 +17,7 @@
 
 .logo_imgs img {
     vertical-align: bottom;
+    max-width: 200px;
 }
 .inbox {
     width: 100%;
@@ -85,7 +86,7 @@
 .main_container {
     height: 70vh;
     /* background-color: #186994; */
-    position: relative 
+    position: relative;
 }
 
 .footer_btns {
@@ -103,6 +104,35 @@
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    width: 40%;
+    width: 100%;
     padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+
+@media only screen and (max-width: 520px) {
+    .inbox {
+      width: 100%;
+      font-size: 15px;
+      margin-top: 20px;
+    }
+
+    .main_container {
+        height: 20vh;
+        position: relative;
+    }
+    
+
+    .footer_btns button {
+        margin-top: 10px;
+        width: 40%;
+        font-size: 12px;
+    }
+
+    .footer_btns button:nth-child(1) {
+        width: 85%;   
+    }
+
+  }
