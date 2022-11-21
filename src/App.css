@@ -87,6 +87,10 @@ a {
   right: 2rem; */
 }
 
+.top_right_icon:hover {
+  cursor: pointer;
+}
+
 
 @media only screen and (max-width: 520px) {
   .title_logo {

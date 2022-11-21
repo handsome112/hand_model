@@ -112,6 +112,13 @@
 }
 
 
+
+.from_title {
+    /* text-decoration: underline; */
+    border-bottom: 1px solid white;
+    text-align: left;
+}
+
 @media only screen and (max-width: 520px) {
     .inbox {
       width: 100%;

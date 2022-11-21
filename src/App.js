@@ -10,6 +10,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import ShowPage from './components/showpage';
+import FormPage from './components/formpage';
 
 
 const Button = styled.button`
@@ -57,16 +58,24 @@ function Passpanel() {
 
 function Dashboard() {
   const [join, setJoin] = useState(false);
+  const [menuShow, setMenuShow] = useState(false);
 
   const clickMe = async () => {
     setJoin(true);
   }
+
+  const setHamburgerShow = async () => {
+    setMenuShow(true);
+  }
+
   return (
     <>
       {join == true ? (
-        <ShowPage />
+        // <ShowPage />
+        <FormPage />
       ) : (
         <>
+        {menuShow && (<h1>You just pressed Hamburger !</h1>)}
           <Container>
             <div className='mt-5vh'>
             <Row>
@@ -75,13 +84,12 @@ function Dashboard() {
               </Col>
               <Col xs={2} md={3}>
                 <div className='top_right_icon'>
-                  <FaBars style={{ color: 'white', fontSize: '30px' }} />
+                  <FaBars  style={{ color: 'white', fontSize: '30px' }} onClick = {setHamburgerShow} />
                 </div>
               </Col>
             </Row>
             </div>
             <Row>
-
 
             </Row>
 
