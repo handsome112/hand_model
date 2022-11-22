@@ -119,6 +119,15 @@
     text-align: left;
 }
 
+
+/* here is part of to change background color NavBar */
+#offcanvasNavbar {
+	background-color: #131518;
+    color: #FF7171;
+    text-align: center;
+    
+}
+
 @media only screen and (max-width: 520px) {
     .inbox {
       width: 100%;

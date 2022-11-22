@@ -11,6 +11,7 @@ import Col from 'react-bootstrap/Col';
 
 import ShowPage from './components/showpage';
 import FormPage from './components/formpage';
+import NavBar from './components/navbar';
 
 
 const Button = styled.button`
@@ -71,23 +72,14 @@ function Dashboard() {
   return (
     <>
       {join == true ? (
-        // <ShowPage />
-        <FormPage />
+        <ShowPage />
+        // <FormPage />
       ) : (
         <>
-        {menuShow && (<h1>You just pressed Hamburger !</h1>)}
+          {/* {menuShow && (<Container><NavBar /></Container>)} */}
           <Container>
             <div className='mt-5vh'>
-            <Row>
-              <Col xs={10} md={9}>
-                <div className='title_logo font-face-tg'><a href='https://HANDMODELS.CO.UK'><b className='title_logo_hand'>HAND</b><b>MODELS.CO.UK</b></a></div>
-              </Col>
-              <Col xs={2} md={3}>
-                <div className='top_right_icon'>
-                  <FaBars  style={{ color: 'white', fontSize: '30px' }} onClick = {setHamburgerShow} />
-                </div>
-              </Col>
-            </Row>
+              <NavBar />
             </div>
             <Row>
 
@@ -108,13 +100,5 @@ function Dashboard() {
   )
 }
 
-// function clickMe() {
-//   // alert("You clicked me!");
-//   // setJoin(true);
-
-//   return (
-//     <ShowPage />
-//   );
-// }
 
 export default App;
