@@ -11,14 +11,11 @@
   background-image: url(/public/back.jpg);
 }
 
-.title_logo {
-  color: #FF7171;
-  /* font-family: 'Terminator_Genisys';
-  font-style: normal; */
+.title_logo a {
+  color: #FF7171 !important;
   font-weight: 400;
   font-size: 36px;
   line-height: 84%;
-  /* margin-top: 5vh; */
 }
 
 
@@ -33,7 +30,7 @@
 
 a {
   text-decoration: none !important;
-  color: #FF7171 !important;
+  /* color: #FF7171 !important; */
 }
 
 .main_slogan {
