@@ -1,4 +1,3 @@
-
 .container {
     color: white;
 }
@@ -19,6 +18,7 @@
     vertical-align: bottom;
     max-width: 200px;
 }
+
 .inbox {
     width: 100%;
     background-color: #186994;
@@ -27,6 +27,7 @@
     padding: 7px;
     font-family: 'Montserrat';
 }
+
 .form_1 {
     display: flex;
     justify-content: center;
@@ -55,9 +56,7 @@
     font-size: 12px;
 }
 
-.mail_img {
-
-}
+.mail_img {}
 
 .frame div {
     align-items: center;
@@ -66,11 +65,11 @@
 .button_group {
     color: black;
     font-size: 15px;
-    
+
 }
 
-.button_group div{
-    padding:10px 3px  !important;
+.button_group div {
+    padding: 10px 3px !important;
 }
 
 .each_btn {
@@ -83,6 +82,7 @@
     background-color: #232;
     color: white;
 }
+
 .main_container {
     height: 70vh;
     /* background-color: #186994; */
@@ -92,13 +92,14 @@
 .footer_btns {
     margin-top: 20px;
 }
+
 .footer_btns button {
-    margin: 0 10px ;
+    margin: 0 10px;
     border-radius: 20px;
     padding: 3px 20px;
 }
 
- .password_checker  {
+.password_checker {
     position: absolute;
     top: 45%;
     left: 50%;
@@ -122,10 +123,10 @@
 
 /* here is part of to change background color NavBar */
 #offcanvasNavbar {
-	background-color: #131518;
+    background-color: #131518;
     color: white;
     text-align: center;
-    
+
 }
 
 .overlay {
@@ -135,102 +136,97 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
     overflow-x: hidden;
     transition: 0.5s;
-  }
-  
-  .overlay-content {
+}
+
+.overlay-content {
     position: relative;
     top: 25%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
-  }
-  
-  .overlay a {
+}
+
+.overlay a {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
     color: #818181;
     display: block;
     transition: 0.3s;
-  }
-  
-  .overlay a:hover, .overlay a:focus {
+}
+
+.overlay a:hover,
+.overlay a:focus {
     color: #f1f1f1;
-  }
-  
-  .overlay .closebtn {
+}
+
+.overlay .closebtn {
     position: absolute;
     top: 20px;
     right: 45px;
     font-size: 60px;
-  }
-  .curtainspan {
-    font-size:30px;
-    cursor:pointer;
-  }
+}
 
-  .title_container {
+.curtainspan {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.title_container {
     display: flex;
     justify-content: space-between;
-  }
+}
 
-  .curtain_headline {
+.curtain_headline {
     font-size: 20px;
     min-height: 50px;
     min-width: 120px;
-  }
+}
 
-  .curtain_footline {
+.curtain_footline {
     font-size: 20px;
     min-height: 50px;
     margin-top: 80vh;
-  }
+}
 
-  .modal_title {
+.modal_title {
     width: 90%;
     max-width: 1400px;
     margin: 0 auto;
-  }
+}
 
-  .curtain_line {
+.curtain_line {
     display: flex;
     width: 100%;
     color: #d2d2d2;
     justify-content: space-around;
     cursor: pointer;
-  }
+}
 
-  .curtain_line div:hover {
+.curtain_line div:hover {
     color: #fff;
-  }
-  
-  @media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-    }
-  }
+}
+
+@media screen and (max-height: 450px) {}
 
 
 
 @media only screen and (max-width: 520px) {
     .inbox {
-      width: 100%;
-      font-size: 15px;
-      margin-top: 20px;
+        width: 100%;
+        font-size: 15px;
+        margin-top: 20px;
     }
 
     .main_container {
         height: 20vh;
         position: relative;
     }
-    
+
 
     .footer_btns button {
         margin-top: 10px;
@@ -239,13 +235,14 @@
     }
 
     .footer_btns button:nth-child(1) {
-        width: 85%;   
+        width: 85%;
     }
+
     .curtain_line {
         flex-direction: column;
     }
 
-    .curtain_headline { 
+    .curtain_headline {
         width: 100%;
     }
 
@@ -256,10 +253,20 @@
     .curtain_footline {
         margin-top: 0;
     }
-    
+
 
     .curtainspan {
         font-size: 25px;
-      }
+    }
 
-  }
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 35px;
+        top: 20px;
+        right: 15px;
+    }
+
+}

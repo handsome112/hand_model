@@ -49,7 +49,8 @@ function NavBar() {
                             <b className='title_logo_hand'>HAND</b><b>MODELS.CO.UK</b>
                         </a>
                     </div>
-                    <div className="curtainspan" onClick={openNav}>&#9776;</div>
+                    <div className="curtainspan" onClick={openNav}>&#9776;</div> 
+                    {/* 9783 */}
                 </div>
                 <div id="myNav" className="overlay">
                     <div className='modal_title'>
