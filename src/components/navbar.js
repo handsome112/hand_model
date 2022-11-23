@@ -24,9 +24,9 @@ const btnLists = [
     { id: 1, text: "About handmodels.co.uk" },
     { id: 2, text: "Join our agency" },
     { id: 3, text: "Favorites" },
-    { id: 4, text: "Client Temrms" },
+    { id: 4, text: "Client Terms" },
     { id: 5, text: "Model Terms" },
-    { id: 6, text: "Privacy Police" },
+    { id: 6, text: "Privacy Policy" },
     { id: 7, text: "Contact us" },
 ];
 

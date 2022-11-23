@@ -44,15 +44,18 @@ a {
 }
 
 .hand_div {
-  margin-left: -15%;
+  margin-left: -40%;
+  /* -40 */
 }
 
 .model_div {
-  margin-left: 5%;
+  margin-left: -5%;
+  /* -5 */
 }
 
 .agency_div {
-  margin-left: 25%;
+  margin-left: 30%;
+  /* 30 */
 }
 
 .main_slogan div {
@@ -99,6 +102,8 @@ a {
   }
 
   .title_logo a {
-    font-size: 28px;
+    font-size: 24px;
   }
+
+  
 }
