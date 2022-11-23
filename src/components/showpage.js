@@ -69,7 +69,7 @@ function ShowPage() {
                 <Row>
                     <div className='top_space'></div>
                 </Row>
-                <div className='button_group'>
+                {/* <div className='button_group'>
                     <Row>
                         {itemLists.map((todo) => (
                             <Col xs={12} sm={6} md={4} lg={3} xl={1}>
@@ -79,7 +79,7 @@ function ShowPage() {
                             </Col>
                         ))}
                     </Row>
-                </div>
+                </div> */}
                 <div className='main_container'>
                     <div className='password_checker'>
                         <Row>
