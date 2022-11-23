@@ -97,4 +97,8 @@ a {
   .first_page {
     height: 140vh;
   }
+
+  .title_logo a {
+    font-size: 28px;
+  }
 }

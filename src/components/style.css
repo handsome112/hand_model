@@ -256,5 +256,8 @@
     .curtain_footline {
         margin-top: 0;
     }
+    .title_logo {
+        font-size: 15px;
+    }
 
   }
