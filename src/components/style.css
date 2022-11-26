@@ -176,6 +176,10 @@
     cursor: pointer;
 }
 
+.mt-5vh {
+    margin-top: 5vh !important;
+  }
+
 .title_container {
     display: flex;
     justify-content: space-between;
