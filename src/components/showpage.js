@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Envelope } from 'react-bootstrap-icons';
 import LoginModal from "react-login-modal";
+import { Link } from "react-router-dom";
 
 
 import './style.css';
@@ -98,9 +99,9 @@ function ShowPage() {
                     </div>
                 </div>
                 <div className='footer_btns'>
-                        {btnLists.map((btnlist) => (
-                                <button>{btnlist.text}</button>
-                        ))}
+                    {btnLists.map((btnlist) => (
+                        <button>{btnlist.text}</button>
+                    ))}
 
                 </div>
             </Container>

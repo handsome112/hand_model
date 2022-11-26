@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import Admin from './components/admin'
 import reportWebVitals from './reportWebVitals';
 import './fonts/Terminator_Genisys/Terminator_Genisys.ttf';
 import './fonts/Montserrat/Montserrat-Regular.ttf';
+
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route index path="/" element={<App />} />
+        <Route path="/admin" element={<Admin />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
