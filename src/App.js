@@ -12,6 +12,9 @@ import Col from 'react-bootstrap/Col';
 import ShowPage from './components/showpage';
 import FormPage from './components/formpage';
 import NavBar from './components/navbar';
+import Admin from './components/admin';
+
+import { Link } from "react-router-dom";
 
 
 const Button = styled.button`
@@ -31,15 +34,14 @@ function App() {
   const [Auth, setAuth] = useState(true);
   return (
     <div className="App">
-      <div className='first_page'>
-        {Auth ? (
-          <Dashboard />
-        ) : (
-          // <Dashboard/>
-          <Passpanel />    //here does not pass at all !!!  ignore it !!
-        )}
 
-      </div>
+      {Auth ? (
+        <Dashboard />
+      ) : (
+        // <Dashboard/>
+        <Passpanel />    //here does not pass at all !!!  ignore it !!
+      )}
+
     </div>
   );
 }
@@ -72,28 +74,37 @@ function Dashboard() {
   return (
     <>
       {join == true ? (
-        <ShowPage />
+        <>
+          <div className='page'>
+            <NavBar />
+            <Admin />
+          </div>
+        </>
         // <FormPage />
       ) : (
         <>
           {/* {menuShow && (<Container><NavBar /></Container>)} */}
-          <Container>
-            <div className='mt-5vh'>
-              <NavBar />
-            </div>
-            <Row>
+          <div className='first_page'>
+            <Container>
+              <div className='mt-5vh'>
+                <NavBar />
+              </div>
+              <Row>
 
-            </Row>
+              </Row>
 
-            <div className='main_slogan font-face-ms'>
-              <div className='hand_div'>HAND</div>
-              <div className='model_div'>MODEL</div>
-              <div className='agency_div'>AGENCY</div>
-            </div>
-            <div className='apply_join'>
-              <Button onClick={clickMe}>Apply to Join</Button>
-            </div>
-          </Container>
+              <div className='main_slogan font-face-ms'>
+                <div className='hand_div'>HAND</div>
+                <div className='model_div'>MODEL</div>
+                <div className='agency_div'>AGENCY</div>
+              </div>
+              <div className='apply_join'>
+                {/* <Link to={'/admin'}> */}
+                <Button onClick={clickMe}>Apply to Join</Button>
+                {/* </Link> */}
+              </div>
+            </Container>
+          </div>
         </>
       )}
     </>

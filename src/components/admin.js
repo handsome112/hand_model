@@ -12,7 +12,7 @@ function Admin() {
 
     return (
         <>
-            <div className='page'>
+            <div>
                 <Container>
                     <Row>
                         <div className='top_space'></div>
