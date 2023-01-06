@@ -3,7 +3,7 @@
 }
 
 .top_space {
-    height: 20px;
+    height: 15px;
 }
 
 .show_dashboard {
@@ -133,7 +133,7 @@
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 100;
     top: 0;
     left: 0;
     background-color: rgb(0, 0, 0);
@@ -183,6 +183,7 @@
 .title_container {
     display: flex;
     justify-content: space-between;
+    padding-top: 50px;
     background: transparent !important;
 }
 
@@ -231,6 +232,10 @@
     .main_container {
         height: 20vh;
         position: relative;
+    }
+
+    .title_container {
+        padding-top: 10px;
     }
 
 

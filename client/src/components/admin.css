@@ -1,0 +1,49 @@
+.content_share {
+  width: 80vw;
+  margin-left: 10vw;
+  background: rgb(17, 16, 16);
+  opacity: 0.94;
+  border-radius: 20px;
+  box-shadow: 6px 5px 1px 1px #2a2b2b6b;
+  padding: 20px;
+  margin-top: 5%;
+}
+
+.admin_title {
+  color: #131518;
+}
+
+.page {
+  /* height: Calc(130vh); */
+  background-image: url(/public/admin_back.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  padding-bottom: 155px;
+}
+
+.fileinput {
+  /* position: relative; */
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.form-btns {
+  margin-top: 60px;
+
+}
+
+.add-btn {
+  width: 100%;
+}
+
+h2 {
+  text-align: left;
+}
+
+/* 
+  .custom_select {
+    padding: 0.1em;
+  } */

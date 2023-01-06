@@ -39,9 +39,8 @@ function App() {
         <Dashboard />
       ) : (
         // <Dashboard/>
-        <Passpanel />    //here does not pass at all !!!  ignore it !!
+        <Passpanel />    //here does not pass at all !  ignore it !
       )}
-
     </div>
   );
 }
