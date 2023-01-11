@@ -69,6 +69,12 @@ a {
   right: 0;
 }
 
+.view_btn {
+  position:absolute;
+  bottom: 0rem;
+  left: 0;
+}
+
 .font-face-tg {
   font-family: "Terminator_Genisys";
 }

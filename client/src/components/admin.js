@@ -5,6 +5,8 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
+import ReactLoading from "react-loading";
+
 import Message from './Message';
 import Progress from './Progress';
 
@@ -69,17 +71,6 @@ function Admin() {
 
     const saveModal = () => {
 
-        //     availability: String,
-        //     from: String,
-        //     ethnic: String,
-        //     expereience: String,
-        //     gender: String,
-        //     height: String,
-        //     nationality: String,
-        //     shoesize: String,
-        //     skintone: String,
-        // return;
-
         const data = {
             availability: texts[0][availability],
             from: texts[1][from],
@@ -90,13 +81,14 @@ function Admin() {
             nationality: texts[6][nationality],
             shoesize: texts[7][shoesize],
             skintone: texts[8][skintone],
-            filename: Date.now() + '_' +filename
+            filename: Date.now() + '_' + filename
         };
 
         axios.post(`http://localhost:8080/api/add`, { data })
             .then(res => {
                 console.log(res);
                 console.log(res.data);
+                alert('Model has been saved successfully.');
             })
     }
 
@@ -198,176 +190,176 @@ function Admin() {
     return (
         <>
             {(texts.length !== 0) &&
-            <div className='content_share'>
-                <Container>
-                    <Row>
-                        <Col sm={12} md={7}>
+                <div className='content_share'>
+                    <Container>
+                        <Row>
+                            <Col sm={12} md={7}>
 
-                            <Row>
-                                <div className='top_space'></div>
-                            </Row>
-                            <Row>
-                                <div className='top_space'></div>
-                            </Row>
-                            <Row>
-                                <div className='top_space'></div>
-                            </Row>
-                            <Row>
-                                <div className='top_space'></div>
-                            </Row>
+                                <Row>
+                                    <div className='top_space'></div>
+                                </Row>
+                                <Row>
+                                    <div className='top_space'></div>
+                                </Row>
+                                <Row>
+                                    <div className='top_space'></div>
+                                </Row>
+                                <Row>
+                                    <div className='top_space'></div>
+                                </Row>
 
-                            <Row>
-                                <Col sm={12} md={4}>
-                                    <span>Please Select Availability.</span>
-                                </Col>
-                                <Col sm={12} md={8}>
-                                    <Form.Select aria-label="Default select example" className='custom_select' onChange={event => changeAvailability(event)}>
-                                        {texts[0].map((text, i) => (
-                                            <option value={i}>{text}</option>
-                                        ))}
-                                    </Form.Select>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <div className='top_space'></div>
-                            </Row>
+                                <Row>
+                                    <Col sm={12} md={4}>
+                                        <span>Please Select Availability.</span>
+                                    </Col>
+                                    <Col sm={12} md={8}>
+                                        <Form.Select aria-label="Default select example" className='custom_select' onChange={event => changeAvailability(event)}>
+                                            {texts[0].map((text, i) => (
+                                                <option value={i}>{text}</option>
+                                            ))}
+                                        </Form.Select>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <div className='top_space'></div>
+                                </Row>
 
-                            <Row>
-                                <Col sm={12} md={4}>
-                                    <span>Please Select You From.</span>
-                                </Col>
-                                <Col sm={12} md={8}>
-                                    <Form.Select aria-label="Default select example" className='custom_select' onChange={event => changeFrom(event)}>
-                                        {texts[1].map((text, i) => (
-                                            <option value={i}>{text}</option>
-                                        ))}
-                                    </Form.Select>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <div className='top_space'></div>
-                            </Row>
+                                <Row>
+                                    <Col sm={12} md={4}>
+                                        <span>Please Select You From.</span>
+                                    </Col>
+                                    <Col sm={12} md={8}>
+                                        <Form.Select aria-label="Default select example" className='custom_select' onChange={event => changeFrom(event)}>
+                                            {texts[1].map((text, i) => (
+                                                <option value={i}>{text}</option>
+                                            ))}
+                                        </Form.Select>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <div className='top_space'></div>
+                                </Row>
 
-                            <Row>
-                                <Col sm={12} md={4}>
-                                    <span>Please Select Ethnic Origin.</span>
-                                </Col>
-                                <Col sm={12} md={8}>
-                                    <Form.Select aria-label="Default select example" className='custom_select' onChange={event => changeEthnic(event)}>
-                                        {texts[2].map((text, i) => (
-                                            <option value={i}>{text}</option>
-                                        ))}
-                                    </Form.Select>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <div className='top_space'></div>
-                            </Row>
+                                <Row>
+                                    <Col sm={12} md={4}>
+                                        <span>Please Select Ethnic Origin.</span>
+                                    </Col>
+                                    <Col sm={12} md={8}>
+                                        <Form.Select aria-label="Default select example" className='custom_select' onChange={event => changeEthnic(event)}>
+                                            {texts[2].map((text, i) => (
+                                                <option value={i}>{text}</option>
+                                            ))}
+                                        </Form.Select>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <div className='top_space'></div>
+                                </Row>
 
-                            <Row>
-                                <Col sm={12} md={4}>
-                                    <span>Please Select Experience.</span>
-                                </Col>
-                                <Col sm={12} md={8}>
-                                    <Form.Select aria-label="Default select example" className='custom_select' onChange={event => changeExperience(event)}>
-                                        {texts[3].map((text, i) => (
-                                            <option value={i}>{text}</option>
-                                        ))}
-                                    </Form.Select>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <div className='top_space'></div>
-                            </Row>
+                                <Row>
+                                    <Col sm={12} md={4}>
+                                        <span>Please Select Experience.</span>
+                                    </Col>
+                                    <Col sm={12} md={8}>
+                                        <Form.Select aria-label="Default select example" className='custom_select' onChange={event => changeExperience(event)}>
+                                            {texts[3].map((text, i) => (
+                                                <option value={i}>{text}</option>
+                                            ))}
+                                        </Form.Select>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <div className='top_space'></div>
+                                </Row>
 
-                            <Row>
-                                <Col sm={12} md={4}>
-                                    <span>Please Select Gender.</span>
-                                </Col>
-                                <Col sm={12} md={8}>
-                                    <Form.Select aria-label="Default select example" className='custom_select' onChange={event => changeGender(event)}>
-                                        {texts[4].map((text, i) => (
-                                            <option value={i}>{text}</option>
-                                        ))}
-                                    </Form.Select>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <div className='top_space'></div>
-                            </Row>
+                                <Row>
+                                    <Col sm={12} md={4}>
+                                        <span>Please Select Gender.</span>
+                                    </Col>
+                                    <Col sm={12} md={8}>
+                                        <Form.Select aria-label="Default select example" className='custom_select' onChange={event => changeGender(event)}>
+                                            {texts[4].map((text, i) => (
+                                                <option value={i}>{text}</option>
+                                            ))}
+                                        </Form.Select>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <div className='top_space'></div>
+                                </Row>
 
-                            <Row>
-                                <Col sm={12} md={4}>
-                                    <span>Please Select Height.</span>
-                                </Col>
-                                <Col sm={12} md={8}>
-                                    <Form.Select aria-label="Default select example" className='custom_select' onChange={event => changeHeight(event)}>
-                                        {texts[5].map((text, i) => (
-                                            <option value={i}>{text}</option>
-                                        ))}
-                                    </Form.Select>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <div className='top_space'></div>
-                            </Row>
+                                <Row>
+                                    <Col sm={12} md={4}>
+                                        <span>Please Select Height.</span>
+                                    </Col>
+                                    <Col sm={12} md={8}>
+                                        <Form.Select aria-label="Default select example" className='custom_select' onChange={event => changeHeight(event)}>
+                                            {texts[5].map((text, i) => (
+                                                <option value={i}>{text}</option>
+                                            ))}
+                                        </Form.Select>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <div className='top_space'></div>
+                                </Row>
 
-                            <Row>
-                                <Col sm={12} md={4}>
-                                    <span>Please Select Nationality.</span>
-                                </Col>
-                                <Col sm={12} md={8}>
-                                    <Form.Select aria-label="Default select example" className='custom_select' onChange={event => changeNationality(event)}>
-                                        {texts[6].map((text, i) => (
-                                            <option value={i}>{text}</option>
-                                        ))}
-                                    </Form.Select>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <div className='top_space'></div>
-                            </Row>
+                                <Row>
+                                    <Col sm={12} md={4}>
+                                        <span>Please Select Nationality.</span>
+                                    </Col>
+                                    <Col sm={12} md={8}>
+                                        <Form.Select aria-label="Default select example" className='custom_select' onChange={event => changeNationality(event)}>
+                                            {texts[6].map((text, i) => (
+                                                <option value={i}>{text}</option>
+                                            ))}
+                                        </Form.Select>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <div className='top_space'></div>
+                                </Row>
 
-                            <Row>
-                                <Col sm={12} md={4}>
-                                    <span>Please Select Shoe Size.</span>
-                                </Col>
-                                <Col sm={12} md={8}>
-                                    <Form.Select aria-label="Default select example" className='custom_select' onChange={event => changeShoeSize(event)}>
-                                        {texts[7].map((text, i) => (
-                                            <option value={i}>{text}</option>
-                                        ))}
-                                    </Form.Select>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <div className='top_space'></div>
-                            </Row>
+                                <Row>
+                                    <Col sm={12} md={4}>
+                                        <span>Please Select Shoe Size.</span>
+                                    </Col>
+                                    <Col sm={12} md={8}>
+                                        <Form.Select aria-label="Default select example" className='custom_select' onChange={event => changeShoeSize(event)}>
+                                            {texts[7].map((text, i) => (
+                                                <option value={i}>{text}</option>
+                                            ))}
+                                        </Form.Select>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <div className='top_space'></div>
+                                </Row>
 
-                            <Row>
-                                <Col sm={12} md={4}>
-                                    <span>Please Select Skin Tone.</span>
-                                </Col>
-                                <Col sm={12} md={8}>
-                                    <Form.Select aria-label="Default select example" className='custom_select' onChange={event => changeSkinTone(event)}>
-                                        {texts[8].map((text, i) => (
-                                            <option value={i}>{text}</option>
-                                        ))}
-                                    </Form.Select>
-                                </Col>
-                            </Row>
-                            <Row>
+                                <Row>
+                                    <Col sm={12} md={4}>
+                                        <span>Please Select Skin Tone.</span>
+                                    </Col>
+                                    <Col sm={12} md={8}>
+                                        <Form.Select aria-label="Default select example" className='custom_select' onChange={event => changeSkinTone(event)}>
+                                            {texts[8].map((text, i) => (
+                                                <option value={i}>{text}</option>
+                                            ))}
+                                        </Form.Select>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <div className='top_space'></div>
+                                </Row>
+                            </Col>
+                            <Col sm={12} md={5}>
                                 <div className='top_space'></div>
-                            </Row>
-                        </Col>
-                        <Col sm={12} md={5}>
-                            <div className='top_space'></div>
-                            <div className='top_space'></div>
-                            <div className='top_space'></div>
-                            <div className='top_space'></div>
-                            
-                            {message ? <Message msg={message} /> : null}
-                            <div className='top_space'></div>
+                                <div className='top_space'></div>
+                                <div className='top_space'></div>
+                                <div className='top_space'></div>
+
+                                {message ? <Message msg={message} /> : null}
+                                <div className='top_space'></div>
 
                                 <div className='custom-file mb-4'>
                                     <input
@@ -390,31 +382,38 @@ function Admin() {
                                     onClick={onSubmit}
                                 />
 
-                            {uploadedFile ? (
-                                <div className='row mt-5 p-2'>
-                                    <div className='col-md-10 m-auto'>
-                                        <h5 className='text-center'>{uploadedFile.fileName}</h5>
-                                        <img style={{ width: '100%', maxHeight:'400px', background:'white' }} src={uploadedFile.filePath} alt='' />
+                                {uploadedFile ? (
+                                    <div className='row mt-5 p-2'>
+                                        <div className='col-md-10 m-auto'>
+                                            <h5 className='text-center'>{uploadedFile.fileName}</h5>
+                                            <img style={{ width: '100%', maxHeight: '400px', background: 'white' }} src={uploadedFile.filePath} alt='' />
+                                        </div>
                                     </div>
-                                </div>
-                            ) : null}
-                        </Col>
-                    </Row>
-                    <Row>
-                        <div className='form-btns'>
-                            <Row>
-                                <Col sm={12} md={10}>
-                                </Col>
-                                <Col sm={12} md={2}>
-                                    <Button className='add-btn' variant="success" onClick={saveModal}>Add One Model</Button>
-                                </Col>
-                            </Row>
-                        </div>
-                    </Row>
+                                ) : null}
+                            </Col>
+                        </Row>
+                        <Row>
+                            <div className='form-btns'>
+                                <Row>
+                                    <Col sm={12} md={10}>
+                                    </Col>
+                                    <Col sm={12} md={2}>
+                                        <Button className='add-btn' variant="success" onClick={saveModal}>Add One Model</Button>
+                                    </Col>
+                                </Row>
+                            </div>
+                        </Row>
 
-                </Container>
+                    </Container>
                 </div>
             }
+            {/* {(texts.length !== 0) &&
+                <>
+                    <div className='loading_animation'>
+                        <ReactLoading type={'bars'} color="#f0f" />
+                    </div>
+                </>
+            } */}
         </>
     )
 }
