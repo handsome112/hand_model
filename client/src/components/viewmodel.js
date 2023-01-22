@@ -2,13 +2,12 @@ import { useState, useRef, useEffect } from 'react'
 
 import './viewmodel.css';
 
-function ViewModel() 
-{
-    return(
+function ViewModel() {
+    return (
         <>
-            <h1>Real Handsome</h1>
+            <h1>View Models</h1>
             <div className='content_share'>
-                jijijiji
+                
             </div>
         </>
     )
